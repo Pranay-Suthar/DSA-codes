@@ -32,6 +32,7 @@ It focuses on understanding the recursive approach, breaking down problems into 
 ### 📁 Subfolders
 - [Easy Problems](./Recursion/Easy) – Simple recursion-based problems to build fundamentals.  
 - [Medium Problems](./Recursion/Medium) – Covers backtracking and divide & conquer challenges.  
+- [Hard Problems](./Recursion/Hard) – Advanced recursion challenges like expression parsing, N-Queens, Basic Calculator, Integer to English Words, and other constraint-based problems.
 
 👉 [View All Recursion Codes](./Recursion)
 
