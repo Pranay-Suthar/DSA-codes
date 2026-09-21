@@ -79,3 +79,15 @@ This directory contains practice code and solutions for mathematical problems in
 [View All Math Codes](./Math)
 
 ---
+
+# Stack – DSA Practice
+
+This directory contains practice code and solutions for stack problems in Data Structures and Algorithms. The objective is to understand monotonic stack.
+
+### Subfolders
+- [Easy Problems](./Stack/Easy) – Covers basic stack logic and standard algorithms.
+- [Medium Problems](./Stack/Medium) – More complex problems involving monotonic stack.
+
+[View All Math Codes](./Stack)
+
+---
