@@ -87,6 +87,7 @@ This directory contains practice code and solutions for stack problems in Data S
 ### Subfolders
 - [Easy Problems](./Stack/Easy) – Covers basic stack logic and standard algorithms.
 - [Medium Problems](./Stack/Medium) – More complex problems involving monotonic stack.
+- [Hard Problems](./Stack/Hard) – More complex problems involving monotonic stack.
 
 [View All Math Codes](./Stack)
 
