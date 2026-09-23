@@ -24,47 +24,56 @@ public class Leetcode_402 {
 
     public static String removeKdigits(String num, int k) {
 
-        int len = num.length();
-
-        if (len == k)
-            return "";
+        if (num.length() == k)
+            return "0";
 
         Deque<Character> stack = new ArrayDeque<>();
-
-        int i = 0;
+        StringBuilder sb = new StringBuilder();
         
-        while (k > 0) {
-
-            while (!stack.isEmpty() && num.charAt(i) >= stack.peek()) {
-                stack.push(num.charAt(i));
-            }
+        for (char ch : num.toCharArray()) {
             
-            if (!stack.isEmpty() && num.charAt(i) < stack.peek()) {
-                k--;
+            while (!stack.isEmpty() && k > 0 && stack.peek() > ch) {
                 stack.pop();
-                i = num.indexOf(stack.peek());
-                continue;
+                k--;
             }
-            stack.push(num.charAt(i));
+
+            stack.push(ch);
         }
 
-        StringBuilder sb = new StringBuilder();
-        sb.append(stack.peek());
-        sb.append(num.substring(i, len));
+        while (k > 0) {
+            stack.pop();
+            k--;
+        }
 
-        return sb.toString();
+        while (!stack.isEmpty()) {
+            sb.append(stack.pop());
+        }
 
+        sb.reverse();
+        int idx = 0;
+
+        while (idx < sb.length() && sb.charAt(idx) == '0') {
+            idx++;
+        }
+
+        String res = sb.substring(idx);
+
+        return res.isEmpty() ? "0" : res;
     }
 
     public static void main(String[] args) {
 
-        // String str = 1432219;
-        // int k = 3;
+        String str = "1432219";
+        int k = 3;
         //Output : 1219
         
-        String str = "3238900989831";
-        int k = 5;
+        // String str = "3238900989831";
+        // int k = 5;
         //Output : 989831
+        
+//        String str = "40059";
+//        int k = 2;
+        //Output : 5
 
         System.out.println(removeKdigits(str, k));
     }
