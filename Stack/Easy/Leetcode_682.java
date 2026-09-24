@@ -1,5 +1,4 @@
 import java.util.ArrayDeque;
-import java.util.Deque;
 
 /**
  * Leetcode_682

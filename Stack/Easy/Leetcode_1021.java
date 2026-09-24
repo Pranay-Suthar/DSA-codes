@@ -22,8 +22,6 @@
 //     The input string is "()()", with primitive decomposition "()" + "()".
 //     After removing outer parentheses of each part, this is "" + "" = "".
 
-import java.util.ArrayDeque;
-
 public class Leetcode_1021 {
 
     public static String removeOuterParentheses(String s) {
