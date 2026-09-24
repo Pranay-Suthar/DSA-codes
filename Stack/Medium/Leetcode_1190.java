@@ -16,7 +16,6 @@
 //     Explanation: First, we reverse the substring "oc", then "etco", and finally, the whole string.
 
 import java.util.ArrayDeque;
-import java.util.Deque;
 
 public class Leetcode_1190 {
 
