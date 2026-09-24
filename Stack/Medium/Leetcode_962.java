@@ -34,7 +34,7 @@ public class Leetcode_962 {
 
         int idx = len - 1;
 
-        while (!stack.isEmpty() && idx >= 0) {
+        while (!stack.isEmpty()) {
             if (nums[stack.peek()] <= nums[idx]) {
                 maxWidth = Math.max(maxWidth, idx - stack.peek());
                 // System.out.println(idx - stack.peek());
