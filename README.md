@@ -82,13 +82,15 @@ This directory contains practice code and solutions for mathematical problems in
 
 # Stack – DSA Practice
 
-This directory contains practice code and solutions for stack problems in Data Structures and Algorithms. The objective is to understand monotonic stack.
+This directory contains practice code and solutions for stack problems in Data Structures and Algorithms. The objective is to understand stack-based problem solving, monotonic stacks, and their applications in solving optimization and range-based problems.
 
 ### Subfolders
-- [Easy Problems](./Stack/Easy) – Covers basic stack logic and standard algorithms.
-- [Medium Problems](./Stack/Medium) – More complex problems involving monotonic stack.
-- [Hard Problems](./Stack/Hard) – More complex problems involving monotonic stack.
+- [Easy Problems](./Stack/Easy) – Covers basic stack logic and standard stack-based algorithms.
+- [Medium Problems](./Stack/Medium) – Covers monotonic stacks, next greater/smaller elements, greedy techniques, and boundary-based problems.
+- [Hard Problems](./Stack/Hard) – Covers advanced monotonic stack problems, contribution techniques, and complex stack-based algorithms.
 
-[View All Math Codes](./Stack)
+[View All Stack Codes](./Stack)
+
+---
 
 ---
