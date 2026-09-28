@@ -24,35 +24,37 @@ public class Leetcode_1249 {
     
     public static String minRemoveToMakeValid(String s) {
 
-        int open = 0;
+        int len = s.length();
         char[] strArr = s.toCharArray();
-        Deque<Character> stack = new ArrayDeque<>();
+        Deque<Integer> stack = new ArrayDeque<>();
+        boolean[] toSkip = new boolean[len];
 
-        for (int i = 0; i < strArr.length; i++) {
+        for (int i = 0; i < len; i++) {
             char ch = strArr[i];
             if (ch == '(') {
-                open++;
+                stack.push(i);
             }
             else if (ch == ')') {
-                if (open <= 0) {
-                    continue;
-                }
-                open--;
+                if (stack.isEmpty())
+                    toSkip[i] = true;
+                else
+                    stack.pop();
             }
-            stack.push(ch);
-        }
-        System.out.println(stack);
-        
-        StringBuilder sb = new StringBuilder();
-        for (char ch : stack) {
-            if (ch == '(' && open > 0) {
-                open--;
-                continue;
-            }
-            sb.append(ch);
         }
 
-        return sb.reverse().toString();
+        while (!stack.isEmpty()) {
+            toSkip[stack.pop()] = true;
+        }
+        
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < len; i++) {
+
+            if (!toSkip[i]) {
+                sb.append(strArr[i]);
+            }
+        }
+
+        return sb.toString();
     }
 
     public static void main(String[] args) {
