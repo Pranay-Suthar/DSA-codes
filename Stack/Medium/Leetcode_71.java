@@ -38,22 +38,26 @@
 
 import java.util.ArrayDeque;
 import java.util.Deque;
+import java.util.StringTokenizer;
 
 public class Leetcode_71 {
     
     public static String simplifyPath(String path) {
-        String[] str = path.split("/");
+        // String[] str = path.split("/");
+        StringTokenizer tokenizer = new StringTokenizer(path, "/");
         Deque<String> stack = new ArrayDeque<>();
 
-        for (String s : str) {
-            if (s.equals("") || s.equals(".")) {
+        while (tokenizer.hasMoreTokens()) {
+            String token = tokenizer.nextToken();
+
+            if (token.equals("") || token.equals(".")) {
                 continue;
-            } else if (s.equals("..")) {
+            } else if (token.equals("..")) {
                 if (!stack.isEmpty()) {
                     stack.pop();
                 }
             } else {
-                stack.push(s);
+                stack.push(token);
             }
         }
 
