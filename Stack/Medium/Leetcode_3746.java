@@ -39,20 +39,33 @@ public class Leetcode_3746 {
 
     public static int minLengthAfterRemovals(String s) {
 
-        StringBuilder sb = new StringBuilder();
+        // StringBuilder sb = new StringBuilder();
 
-        for (char ch : s.toCharArray()) {
-            int len = sb.length();
+        // for (char ch : s.toCharArray()) {
+        //     int len = sb.length();
 
-            if (len > 0) {
-                if (sb.charAt(len - 1) == 'a' && ch == 'b' || sb.charAt(len - 1) == 'b' && ch == 'a') {
-                    sb.deleteCharAt(len - 1);
-                    continue;
-                }
+        //     if (len > 0) {
+        //         if (sb.charAt(len - 1) == 'a' && ch == 'b' || sb.charAt(len - 1) == 'b' && ch == 'a') {
+        //             sb.deleteCharAt(len - 1);
+        //             continue;
+        //         }
+        //     }
+        //     sb.append(ch);
+        // }
+        // return sb.length();
+
+        int freqA = 0;
+        int freqB = 0;
+
+        for(int i = 0; i < s.length(); i++){
+            char ch = s.charAt(i);
+            if(ch == 'a'){
+                freqA++;
+            }else{
+                freqB++;
             }
-            sb.append(ch);
         }
-        return sb.length();
+        return Math.abs(freqA - freqB);
     }
 
     public static void main(String[] args) {
