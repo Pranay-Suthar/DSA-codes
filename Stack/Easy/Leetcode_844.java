@@ -15,8 +15,8 @@
 // Output: false
 // Explanation: s becomes "c" while t becomes "b".
 
-import java.util.ArrayDeque;
-import java.util.Deque;
+// import java.util.ArrayDeque;
+// import java.util.Deque;
 
 public class Leetcode_844 {
     public static boolean backspaceCompare(String s, String t) {
