@@ -1,7 +1,7 @@
 /**
  * Lettcode_2696
  */
-public class Lettcode_2696 {
+public class Leetcode_2696 {
 
     public static int minLength(String s) {
         StringBuilder sb = new StringBuilder();
