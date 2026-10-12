@@ -26,6 +26,17 @@
 public class Leetcode_1910 {
 
     public static String removeOccurrences(String s, String part) {
+
+        // StringBuilder sb = new StringBuilder(s);
+        // int len = part.length();
+        // int start = 0;
+        // while(start != -1){
+        //     start = sb.indexOf(part);
+        //     if(start != -1){
+        //         sb.delete(start,start + len);
+        //     }
+        // }
+        // return sb.toString();
         
         StringBuilder sb = new StringBuilder();
         int lenPart = part.length();
