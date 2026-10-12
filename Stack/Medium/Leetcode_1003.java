@@ -26,17 +26,12 @@
 public class Leetcode_1003 {
 
     public static boolean isValid(String s) {
-        
-        StringBuilder sb = new StringBuilder(s);
-        int start = 0;
 
-        while (start != -1) {
-            start = sb.indexOf("abc");
-            if (start != -1) {
-                sb.delete(start, start + 3);
-            }
+        while (s.contains("abc")) {
+            s = s.replace("abc", "");
         }
-        return sb.isEmpty();
+
+        return s.length() == 0;
     }
 
     public static void main(String[] args) {
