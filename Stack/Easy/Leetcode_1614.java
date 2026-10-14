@@ -21,23 +21,19 @@
 //     Input: s = "()(())((()()))"
 //     Output: 3
 
-import java.util.ArrayDeque;
-import java.util.Deque;
-
 public class Leetcode_1614 {
     
     public static int maxDepth(String s) {
         int maxDepth = 0;
-
-        Deque<Character> stack = new ArrayDeque<>();
+        int depth = 0;
 
         for (char ch : s.toCharArray()) {
             if (ch == '(') {
-                stack.push(ch);
+                depth++;
             } else if (ch == ')') {
-                stack.pop();
+                depth--;
             }
-            maxDepth = Math.max(maxDepth, stack.size());
+            maxDepth = Math.max(maxDepth, depth);
         }
 
         return maxDepth;
@@ -45,7 +41,8 @@ public class Leetcode_1614 {
 
     public static void main(String[] args) {
 
-        String str = "";
+        String str = "(-/6)4((*9(8(())4)))";
+        //Output : 5
 
         System.out.println(maxDepth(str));
     }
